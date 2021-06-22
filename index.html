@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="search_style.css" />  
+        <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+        <title>TV SHOW DISCUSSION</title>
+    </head>
+
+
+    <body> 
+
+        <!-- SEARCH BOX -->
+
+        <div class="wrapper">
+            <div class="search-area">
+                <div class="single-search">
+                    <input class="custom-input" type="text" id="search" name="search" placeholder="Find your favorite TV Show :)">
+                    <a href="#" class="icon-area"><img src="imgs/search.png" width=50%></a>                
+                </div>
+                <br>
+            </div>
+        </div>    
+
+
+        <!-- DROP DOWN -->
+        <div class="filters-wrap" id="filters">
+            <div class="filters-area">
+                <div class="filters-sub-area">
+                </div>
+                <div class="filters-btn-area">
+
+                    <select class="dropdown" id="year">
+                        <option value="" disabled selected>YEAR</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                    </select>
+                    
+                    <select class="dropdown" id="genre">
+                        <option value="" disabled selected>GENRE</option>
+                        <option value="action">Action</option>
+                        <option value="romance">Romance</option>
+                        <option value="war">War</option>
+                        <option value="drama">Drama</option>
+                    </select>
+
+                    <select class="dropdown" id="imdb">
+                        <option value="" disabled selected>IMDb</option>
+                        <option value="9">9+</option>
+                        <option value="8">8+</option>
+                        <option value="7">7+</option>
+                        <option value="6">6+</option>
+                    </select>
+                      
+                </div>    
+                <div class="filters-sub-area">
+                </div>
+            </div>
+        </div>
+
+        <div class="chumma">
+        </div>
+
+
+        <!-- POSTERS IMAGE GRID -->
+        
+        <div classes="image-grid" id="image-grid">
+            <div class="row">
+                <div class="column">
+                    <img src="posters/office.png" alt="The office">
+                    <img src="posters/bbt.png" alt="big bang theory">
+                    <img src="posters/got.png" alt="game of throne">
+                    <img src="posters/money.png" alt="money heist">
+                    <img src="posters/ozark.png"  alt="ozark">
+                    <img src="posters/100.png" alt="the 100">
+                    <img src="posters/himym.png"  alt="how i met your mother">
+                    <img src="posters/riverdale.png" alt="riverdale">
+                    <img src="posters/suits.png" alt="suits">
+                    <img src="posters/bb.png" alt="breaking bad">
+                    <img src="posters/bold.png" alt="the bold type">
+                    <img src="posters/dead.png" alt="the walking dead">
+                    <img src="posters/b99.png" alt="brooklyn nine-nine">
+                    <img src="posters/narcos.png" alt="narcos">
+                    <img src="posters/young.png" alt="young sheldon">
+                    <a href="friends.html"><img src="posters/friends.png" alt="friends"></a>
+                    <img src="posters/queens.png" alt="queens gambit">
+                    <img src="posters/murder.png" alt="how to get away with murder">
+                    <img src="posters/gg.png" alt="gossip girl">
+                    <h1>And many more ... </h1>
+                </div>
+            </div> 
+        </div> 
+
+    
+
+    </body>
+</html>
+
+<script>
+    $("#search").keyup(function() {
+        var val = $.trim(this.value);
+        if (val === "")
+            $('img').show();
+        else {
+            $('img').hide();
+            val = val.split(" ").join("\\ ");
+            $("img[alt*=" + val + " i]").show();
+        }
+    });
+</script>
+
+

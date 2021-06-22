@@ -1,0 +1,116 @@
+body,html{
+    height: 60%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f3b927;
+}
+/* ================= SEARCH BAR =================  */
+.wrapper{
+    height: 35%; 
+}
+.search-area{
+    display: flex;
+    justify-content: center;
+    height: 100%; 
+}
+.single-search {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.3);
+}
+.custom-input{
+    border: 0;
+    outline: 0;
+    padding: 0 10px;
+    width: 500px;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    font-size:  20px;
+    font-style: italic;
+}
+input::placeholder {
+    font-size: 20px;
+}
+.icon-area {
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    text-decoration: none;
+}
+/*
+.single-search:hover > .custom-input{
+    padding: 0 10px;
+    width: 500px;
+    caret-color:#262626;
+    transition: width 0.4s linear;
+}
+.single-search:hover > .icon-area{
+    background: white;
+    color: #262626;
+}
+*/
+
+
+/* ================= FILTERS =================  */
+.filters-wrap{
+    height: 20%; 
+}
+.filters-area{
+    display: flex;
+    justify-content: center;
+    height: 100%; 
+    overflow: hidden;
+    /* border:1px solid blue; */
+}
+.filters-sub-area{
+    width: 30%;
+}
+.filters-btn-area{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+  background-color: white;
+  border-radius: 30px;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border:  none;
+}
+
+
+
+/* ================= BLANK SPACE =================  */
+.chumma{
+    height: 20%; 
+    /* border:1px solid blue; */
+}
+
+
+/* ================= IMAGE GRID =================  */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column {
+    flex: 50%;
+    padding: 0 65px;
+}
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width:15%;
+}
